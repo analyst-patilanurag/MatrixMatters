@@ -1,4 +1,4 @@
-# 📘 Core Linear Algebra Concepts for Data Science
+# 📘 Vectors and Vector Spaces
 
 This document provides the **theoretical foundation** for the notebooks in this repository.  
 Each concept includes intuitive explanations, formulas, and clean mathematical notation.
@@ -9,16 +9,9 @@ Each concept includes intuitive explanations, formulas, and clean mathematical n
 
 A **vector** is an ordered list of real numbers representing a point or direction in an $n$-dimensional space:
 
-\[
-\mathbf{v} =
-\begin{bmatrix}
-v_1 \\
-v_2 \\
-\vdots \\
-v_n
-\end{bmatrix}
-\in \mathbb{R}^n
-\]
+$\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix} \in \mathbb{R}^n$
+
+\[\mathbf{v} =\begin{bmatrix}v_1 \\v_2 \\\vdots \\v_n\end{bmatrix}\in \mathbb{R}^n\]
 
 Examples:
 - 2D point: $\mathbf{v} = [3, 2]$
@@ -32,27 +25,11 @@ Vectors are the building blocks for all linear algebra in machine learning, NLP,
 
 ### **Vector addition** (component-wise):
 
-\[
-\mathbf{u} + \mathbf{v} =
-\begin{bmatrix}
-u_1 + v_1 \\
-u_2 + v_2 \\
-\vdots \\
-u_n + v_n
-\end{bmatrix}
-\]
+$\mathbf{u} + \mathbf{v} =\begin{bmatrix}u_1 + v_1 \\u_2 + v_2 \\\vdots \\u_n + v_n\end{bmatrix}$
 
 ### **Scalar multiplication**:
 
-\[
-c\,\mathbf{v} =
-\begin{bmatrix}
-c v_1 \\
-c v_2 \\
-\vdots \\
-c v_n
-\end{bmatrix}
-\]
+$\c\mathbf{v} =\begin{bmatrix}c v_1 \\c v_2 \\\vdots \\c v_n\end{bmatrix}$
 
 These operations let us combine or scale vectors while staying inside the same space.
 
@@ -88,31 +65,16 @@ This is the structure behind all linear modeling, dimensionality reduction, and 
 
 A **linear combination** of vectors $\mathbf{v}_1,\dots,\mathbf{v}_k$ is:
 
-\[
-\mathbf{x} = c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_k\mathbf{v}_k,
-\qquad c_i \in \mathbb{R}
-\]
+$\mathbf{x} = c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_k\mathbf{v}_k,
+\qquad c_i \in \mathbb{R}$
 
 The **span** of these vectors is all possible linear combinations:
 
-\[
-\text{span}\{\mathbf{v}_1,\dots,\mathbf{v}_k\}
-= 
-\left\{
-c_1\mathbf{v}_1 + \dots + c_k\mathbf{v}_k \;\middle|\; c_i \in \mathbb{R}
-\right\}
-\]
+$
+\text{span}\{\mathbf{v}_1,\dots,\mathbf{v}_k\}= \left\{c_1\mathbf{v}_1 + \dots + c_k\mathbf{v}_k \;\middle|\; c_i \in \mathbb{R}\right\}$
 
 Interpretation:
 - Span = everything we can construct by mixing given vectors  
 - If the span covers all of $\mathbb{R}^n$, the set **spans** $\mathbb{R}^n$  
 - If one vector can be written from others → **linear dependence**
-
----
-
-## 🔎 5. Visual Intuition (ASCII Diagrams)
-
-### **Single vector → a line**
-
-If $\mathbf{v}$ is in $\mathbb{R}^2$:
 
